@@ -26,7 +26,7 @@ gridWidget::gridWidget(QWidget *parent) :
     memset(drawingGrid, false, sizeof(bool)*(m_numberOfCells * m_numberOfCells));
     memset(changedGrid, false, sizeof(bool)*(m_numberOfCells * m_numberOfCells));
     connect(timer, SIGNAL(timeout()), this, SLOT(nextGeneration()));
-
+    //not much changed
 }
 
 gridWidget::~gridWidget()
