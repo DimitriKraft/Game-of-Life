@@ -20,13 +20,17 @@ protected:
     void mousePressEvent(QMouseEvent *e);
     void mouseMoveEvent(QMouseEvent *e);
     void mouseReleaseEvent(QMouseEvent *e);
+    void wheelEvent(QWheelEvent *e);
 signals:
     void numberOfGenerationsChanged(bool ok);
     void HighScoreChanged(bool ok);
+    void numberOfCellsChanged(bool ok);
+    void colorChanged(bool ok);
 //    void end();
 public slots:
-
+    QColor getColor();
     int getNumberOfCells();
+    int getNumberOfAliveCells();
     void setNumberOfCells(int number);
     void setTimerInterval(int milliseconds);
     int getHighScore();
@@ -39,11 +43,12 @@ public slots:
     void setRandomCells();
     int getNumberOfGenerations();
 
-
+    void setCellColor();
+//    qreal scale{1};
 private slots:
     void drawGrid(QPainter &p);
     void drawCells(QPainter &p);
-    void drawNewCells();
+    void nextGeneration();
     void drawMousePressedCells(QPainter &p);
 
 
@@ -54,20 +59,23 @@ int m_initialGenerations;
 
 bool mouse_pressed_on{false};
 int m_numberOfGenerations{0};
+int m_numberOfAliveCells{0};
 
 
 bool *grid;
-bool *nextTestGrid;
-bool *drawingTestGrid;
-bool *changedTestGrid;
+bool *nextGrid;
+bool *drawingGrid;
+bool *changedGrid;
 
-bool isAlive(int x, int y);
-  bool cell_state(int,int);
+void setCell(int x, int y);
+bool cell_state(int, int);
 
 //bool isDead(int x,int y);
 QTimer *timer;
+QColor color{Qt::black};
 
-
+public:
+ qreal scale{1};
 };
 
 #endif // GRIDWIDGET_H

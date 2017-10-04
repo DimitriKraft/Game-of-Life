@@ -20,7 +20,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 QMAKE_CXXFLAGS_RELEASE -= -O
 QMAKE_CXXFLAGS_RELEASE -= -O1
 QMAKE_CXXFLAGS_RELEASE -= -O2
-QMAKE_CXXFLAGS_RELEASE += -O3
+QMAKE_CXXFLAGS_RELEASE -= -O3
+QMAKE_CXXFLAGS_RELEASE -= -O4
+QMAKE_CXXFLAGS_RELEASE += -O5
 
 
 # add the desired -O3 if not present
@@ -40,6 +42,3 @@ HEADERS += mainwindow.h \
 
 FORMS += \
         mainwindow.ui
-
-RESOURCES += \
-              qdarkstyle\style.qrc

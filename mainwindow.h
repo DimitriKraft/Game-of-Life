@@ -21,9 +21,12 @@ private slots:
     void on_horizontalSlider_sliderMoved(int position);
 
     void on_spinBox_valueChanged(int arg1);
-  public slots:
+
+public slots:
     void updateTextLabel();
     void updateHighScoreLabel();
+    void updateNumberOfAliveCells();
+    void updateButtonColor();
 
 private:
     Ui::MainWindow *ui;

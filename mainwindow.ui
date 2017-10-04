@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1163</width>
+    <width>1134</width>
     <height>733</height>
    </rect>
   </property>
@@ -21,7 +21,7 @@
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>200</x>
       <y>20</y>
       <width>911</width>
       <height>651</height>
@@ -34,8 +34,8 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>150</width>
-      <height>166</height>
+      <width>151</width>
+      <height>195</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -49,7 +49,7 @@
      <item>
       <widget class="QPushButton" name="stopButton">
        <property name="text">
-        <string>Stop</string>
+        <string>Stopp</string>
        </property>
       </widget>
      </item>
@@ -75,7 +75,7 @@
         <number>20</number>
        </property>
        <property name="maximum">
-        <number>400</number>
+        <number>1600</number>
        </property>
        <property name="singleStep">
         <number>4</number>
@@ -111,6 +111,13 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="colorChoser">
+       <property name="text">
+        <string>Farbe ändern</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget_2">
@@ -118,11 +125,24 @@
      <rect>
       <x>410</x>
       <y>680</y>
-      <width>521</width>
+      <width>511</width>
       <height>20</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="displayAliveCells">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QLabel" name="displayNumberOfGenerations">
        <property name="frameShape">
@@ -151,10 +171,6 @@
      </item>
     </layout>
    </widget>
-   <zorder>horizontalLayoutWidget</zorder>
-   <zorder>verticalLayoutWidget</zorder>
-   <zorder>horizontalLayoutWidget_2</zorder>
-   <zorder>displayNumberOfGenerations</zorder>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
